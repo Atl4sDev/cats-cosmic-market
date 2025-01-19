@@ -11,6 +11,6 @@ public class CosmoCatServiceImpl implements CosmoCatService {
     @Override
     @FeatureToggle(FeatureToggles.COSMO_CATS)
     public List<String> getCosmoCats() {
-        return List.of("tisha", "charlik");
+        return List.of("Cosmofury", "Galactio", "Lunapaws", "Skyshine");
     }
 }

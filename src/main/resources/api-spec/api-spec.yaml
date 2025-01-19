@@ -127,6 +127,78 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
 
+  /api/cosmo-cats:
+    get:
+      summary: Get all cosmo cats
+      tags:
+        - CosmoCats
+      responses:
+        '200':
+          description: List of cosmo cats
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+
+  /api/management-console/enable/{name}:
+    post:
+      summary: Enable a feature toggle
+      tags:
+        - FeatureToggle
+      parameters:
+        - in: path
+          name: name
+          required: true
+          schema:
+            type: string
+          description: Name of the feature toggle to enable
+      responses:
+        '200':
+          description: Feature toggle enabled successfully
+          content:
+            application/json:
+              schema:
+                type: string
+                example: Success
+
+  /api/management-console/disable/{name}:
+    post:
+      summary: Disable a feature toggle
+      tags:
+        - FeatureToggle
+      parameters:
+        - in: path
+          name: name
+          required: true
+          schema:
+            type: string
+          description: Name of the feature toggle to disable
+      responses:
+        '200':
+          description: Feature toggle disabled successfully
+          content:
+            application/json:
+              schema:
+                type: string
+                example: Success
+
+  /api/management-console:
+    get:
+      summary: Get all feature toggles
+      tags:
+        - FeatureToggle
+      responses:
+        '200':
+          description: List of feature toggles
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  type: boolean
+
 components:
   schemas:
     ProductDetailsDto:
