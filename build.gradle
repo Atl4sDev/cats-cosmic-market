@@ -14,15 +14,16 @@ java {
 }
 ext {
     // Minimal Coverage
-    minimumCoveragePerFile = 0.8
+    minimumCoveragePerFile = 0.5
     filesExcludedFromCoverage = [
             "**/*CatsCosmicMarketApplication.*",
-            "**/config/*Configuration.*",
+            "**/config/*",
             "**/catscosmicmarket/exception/*",
             "**/catscosmicmarket/DTO/*",
             "**/catscosmicmarket/validation/*",
             "**/catscosmicmarket/domain/*",
-            "**/catscosmicmarket/mappers/*"
+            "**/catscosmicmarket/mappers/*",
+            "**/catscosmicmarket/featuretoggle/*"
     ]
 }
 

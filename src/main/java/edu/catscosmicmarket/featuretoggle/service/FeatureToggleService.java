@@ -27,5 +27,9 @@ public class FeatureToggleService {
     public ConcurrentHashMap<String, Boolean> getFeatureToggles() {
         return featureToggles;
     }
+
+    public boolean isEnabled(String featureName) {
+        return featureToggles.getOrDefault(featureName, false);
+    }
 }
 
