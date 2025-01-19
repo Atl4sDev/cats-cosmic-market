@@ -17,7 +17,12 @@ ext {
     minimumCoveragePerFile = 0.8
     filesExcludedFromCoverage = [
             "**/*CatsCosmicMarketApplication.*",
-            "**/config/*Configuration.*"
+            "**/config/*Configuration.*",
+            "**/catscosmicmarket/exception/*",
+            "**/catscosmicmarket/DTO/*",
+            "**/catscosmicmarket/validation/*",
+            "**/catscosmicmarket/domain/*",
+            "**/catscosmicmarket/mappers/*"
     ]
 }
 

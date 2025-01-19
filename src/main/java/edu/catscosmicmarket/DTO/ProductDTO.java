@@ -22,6 +22,6 @@ public class ProductDTO {
     BigDecimal price;
     @NotNull(message = "Category ID cannot be null")
     Long categoryId;
-    String description;
+    String characteristics;
 
 }

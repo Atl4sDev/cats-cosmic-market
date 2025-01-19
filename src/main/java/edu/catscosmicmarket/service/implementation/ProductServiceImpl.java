@@ -50,7 +50,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public ProductDTO updateProduct(Long id, ProductDTO productDTO) {
         Product product = mockProductDatabase.get(id).toBuilder().name(productDTO.getName()).price(productDTO.getPrice())
-                .characteristics(productDTO.getDescription()).categoryId(productDTO.getCategoryId()).build();
+                .characteristics(productDTO.getCharacteristics()).categoryId(productDTO.getCategoryId()).build();
         System.out.println("Product retrieved: " + product);
         if (product == null) {
             throw new RuntimeException("Product not found");
